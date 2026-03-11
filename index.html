@@ -208,135 +208,110 @@
         background: rgba(215, 178, 74, 0.16);
       }
 
-      /* ---------------- NEW HERO (exactly from screenshot) ---------------- */
+      /* ---------------- Hero ---------------- */
       .hero {
-        background: linear-gradient(145deg, #0b1a33 0%, #1a2b4a 100%);
-        color: white;
-        padding: 60px 0 40px;
-        margin-bottom: 20px;
-      }
-      .hero .container {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 30px;
-      }
-      .hero-content {
-        flex: 1 1 400px;
-      }
-      .hero-logo-placeholder {
-        font-size: 2.5rem;
-        font-weight: 900;
-        letter-spacing: -0.02em;
-        color: var(--gold);
-        margin-bottom: 0.5rem;
-        text-transform: uppercase;
-        line-height: 1.2;
-      }
-      .hero-logo-placeholder small {
-        font-size: 1rem;
-        font-weight: 400;
-        color: rgba(255,255,255,0.7);
-        display: block;
-      }
-      .hero h2 {
-        font-size: 2.8rem;
-        font-weight: 800;
-        line-height: 1.1;
-        margin: 20px 0 15px;
-        color: white;
-      }
-      .hero h2 span {
-        color: var(--gold);
-      }
-      .hero p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        color: rgba(255,255,255,0.85);
-        max-width: 550px;
-        margin-bottom: 30px;
-      }
-      .hero-buttons {
-        display: flex;
-        gap: 16px;
-        flex-wrap: wrap;
-        align-items: center;
-      }
-      .btn-outline-light {
-        background: transparent;
-        border: 2px solid white;
-        color: white;
-        box-shadow: none;
-      }
-      .btn-outline-light:hover {
-        background: rgba(255,255,255,0.1);
-      }
-      .offer-badge {
-        background: var(--gold);
-        color: #0b1a33;
-        border-radius: 40px;
-        padding: 12px 30px;
-        font-weight: 900;
-        font-size: 2rem;
-        line-height: 1;
-        display: inline-block;
-        box-shadow: 0 15px 25px rgba(0,0,0,0.3);
-        margin: 20px 0 10px;
-      }
-      .offer-badge small {
-        font-size: 1rem;
-        font-weight: 700;
-        display: block;
-        color: #0b1a33;
-      }
-      .hero-nav-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 25px;
-        margin-top: 35px;
-        font-weight: 600;
-        color: rgba(255,255,255,0.8);
-        border-top: 1px solid rgba(255,255,255,0.2);
-        padding-top: 25px;
-      }
-      .hero-nav-links a {
-        color: white;
-        font-weight: 700;
-        font-size: 1rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-      .hero-nav-links a:hover {
-        color: var(--gold);
-      }
-      .hero-image-placeholder {
-        flex: 0 1 380px;
-        background: rgba(255,255,255,0.05);
-        border-radius: 30px;
-        padding: 30px;
-        text-align: center;
-        border: 1px dashed rgba(215,178,74,0.5);
-      }
-      .hero-image-placeholder svg {
-        width: 100%;
-        max-width: 280px;
-        height: auto;
-        opacity: 0.8;
-      }
-      @media (max-width: 800px) {
-        .hero .container {
-          flex-direction: column;
-        }
-        .hero h2 {
-          font-size: 2.2rem;
-        }
-        .offer-badge {
-          font-size: 1.8rem;
-        }
+        padding: 34px 0 0;
       }
 
-      /* ---------------- old hero styles removed, everything else untouched ---------------- */
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 34px;
+        align-items: center;
+        padding: 26px 0 18px;
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.7);
+        font-weight: 850;
+        color: rgba(15, 26, 51, 0.9);
+        width: fit-content;
+      }
+      .kicker .spark {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: var(--gold);
+        box-shadow: 0 0 0 6px rgba(215, 178, 74, 0.18);
+      }
+
+      .hero h1 {
+        margin: 16px 0 0;
+        font-size: clamp(40px, 5.4vw, 72px);
+        line-height: 0.96;
+        letter-spacing: -0.05em;
+        color: var(--navy);
+        font-weight: 950;
+      }
+
+      .hero p {
+        margin: 16px 0 0;
+        max-width: 560px;
+        color: rgba(11, 18, 32, 0.72);
+        font-weight: 650;
+        line-height: 1.65;
+        font-size: 16px;
+      }
+
+      .hero-actions {
+        margin-top: 20px;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .hero-media {
+        position: relative;
+        display: grid;
+        place-items: center;
+      }
+
+      .rings {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        pointer-events: none;
+      }
+      .ring {
+        position: absolute;
+        border-radius: 999px;
+        border: 20px solid rgba(15, 26, 51, 0.06);
+      }
+      .ring.r1 {
+        width: 520px;
+        height: 520px;
+      }
+      .ring.r2 {
+        width: 600px;
+        height: 600px;
+        border: 16px solid rgba(215, 178, 74, 0.10);
+      }
+
+      .hero-photo {
+        width: min(420px, 82vw);
+        aspect-ratio: 1 / 1;
+        border-radius: 999px;
+        overflow: hidden;
+        background: #fff;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow2);
+        position: relative;
+        z-index: 2;
+      }
+      .hero-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
 
       /* ---------------- Service cards row (your style) ---------------- */
       .service-strip {
@@ -882,6 +857,7 @@
           align-items: center;
           gap: 8px;
         }
+        .hero-grid,
         .appointment,
         .detail-panel {
           grid-template-columns: 1fr;
@@ -966,97 +942,96 @@
       </div>
     </div>
 
-    <!-- NEW HERO (exactly from screenshot) -->
+    <!-- HERO -->
     <header id="home" class="hero">
       <div class="container">
-        <div class="hero-content">
-          <div class="hero-logo-placeholder">
-            # LOGO HERE
-            <small>ReadySpace</small>
+        <div class="hero-grid">
+          <div>
+            <div class="kicker"><span class="spark"></span> Trusted cleaning for homes & offices</div>
+            <h1>Clean space.<br />Better life.</h1>
+            <p>
+              ReadySpace Cleaning Service brings professional cleaning to homes, offices,
+              and post-construction sites across Ghana. Quick booking + quotes via WhatsApp.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-gold" id="heroWhatsApp" href="#" target="_blank" rel="noopener">
+                <span class="dot" aria-hidden="true">»</span>
+                Book / Get Quote
+              </a>
+
+              <a class="btn btn-navy" href="#services">
+                <span class="dot" aria-hidden="true">✨</span>
+                See Services
+              </a>
+            </div>
           </div>
-          <h2>
-            Best <span>Cleaning Services</span>
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod aliquam erat volutpat
-          </p>
-          <div class="hero-buttons">
-            <a class="btn btn-gold" href="#">Hire us</a>
-            <a class="btn btn-outline-light" href="#">Learn more</a>
-          </div>
-          <div class="offer-badge">
-            45% OFF
-            <small>limited time</small>
-          </div>
-          <div class="hero-nav-links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Testimonies</a>
-            <a href="#">Contact Us</a>
+
+          <div class="hero-media" aria-label="Hero image">
+            <div class="rings" aria-hidden="true">
+              <div class="ring r2"></div>
+              <div class="ring r1"></div>
+            </div>
+            <div class="hero-photo">
+              <!-- Change to your preferred hero image anytime -->
+              <img
+                src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1400&q=80"
+                alt="Professional cleaner"
+              />
+            </div>
           </div>
         </div>
-        <div class="hero-image-placeholder">
-          <!-- simple SVG placeholder for "image" -->
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="100" cy="100" r="90" stroke="var(--gold)" stroke-width="4" stroke-dasharray="8 8" fill="rgba(215,178,74,0.1)"/>
-            <path d="M70 120 L100 60 L130 120 L70 120Z" fill="var(--gold)" opacity="0.6"/>
-            <rect x="80" y="120" width="40" height="40" fill="var(--gold)" opacity="0.3" rx="8"/>
-          </svg>
-        </div>
+
+        <!-- SERVICES STRIP (your cards vibe) -->
+        <section id="services" class="service-strip">
+          <div class="strip-grid">
+            <article class="svc-card">
+              <div class="svc-ico">🧽</div>
+              <h3>Deep Cleaning</h3>
+              <p>Full home reset: kitchen, bathrooms, floors, corners & hard-to-reach areas.</p>
+            </article>
+
+            <article class="svc-card">
+              <div class="svc-ico">🏗️</div>
+              <h3>Post-Construction</h3>
+              <p>Remove cement dust, debris and stains. Make the place move-in ready.</p>
+            </article>
+
+            <article class="svc-card">
+              <div class="svc-ico">🏢</div>
+              <h3>Office Cleaning</h3>
+              <p>Daily/weekly cleaning for workspaces, washrooms and reception areas.</p>
+            </article>
+
+            <article class="svc-card">
+              <div class="svc-ico">🏠</div>
+              <h3>Home Cleaning</h3>
+              <p>Regular home cleaning to keep your rooms fresh, neat and welcoming.</p>
+            </article>
+          </div>
+
+          <!-- Gold contact bar (from your card) -->
+          <div class="contact-bar" aria-label="Contact details">
+            <div class="contact-item">
+              <div class="contact-ico" aria-hidden="true">📍</div>
+              <div>
+                <div class="k">Address</div>
+                <div class="v" id="addrText">Konko Band Prod House</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-ico" aria-hidden="true">📞</div>
+              <div>
+                <div class="k">Phone</div>
+                <div class="v" id="phoneText">054 995 8877</div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </header>
 
-    <!-- SERVICES STRIP (your cards vibe) – moved outside old hero but keeps same classes -->
-    <div class="container" style="margin-top: 30px;">
-      <section id="services" class="service-strip">
-        <div class="strip-grid">
-          <article class="svc-card">
-            <div class="svc-ico">🧽</div>
-            <h3>Deep Cleaning</h3>
-            <p>Full home reset: kitchen, bathrooms, floors, corners & hard-to-reach areas.</p>
-          </article>
-
-          <article class="svc-card">
-            <div class="svc-ico">🏗️</div>
-            <h3>Post-Construction</h3>
-            <p>Remove cement dust, debris and stains. Make the place move-in ready.</p>
-          </article>
-
-          <article class="svc-card">
-            <div class="svc-ico">🏢</div>
-            <h3>Office Cleaning</h3>
-            <p>Daily/weekly cleaning for workspaces, washrooms and reception areas.</p>
-          </article>
-
-          <article class="svc-card">
-            <div class="svc-ico">🏠</div>
-            <h3>Home Cleaning</h3>
-            <p>Regular home cleaning to keep your rooms fresh, neat and welcoming.</p>
-          </article>
-        </div>
-
-        <!-- Gold contact bar (from your card) -->
-        <div class="contact-bar" aria-label="Contact details">
-          <div class="contact-item">
-            <div class="contact-ico" aria-hidden="true">📍</div>
-            <div>
-              <div class="k">Address</div>
-              <div class="v" id="addrText">Konko Band Prod House</div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-ico" aria-hidden="true">📞</div>
-            <div>
-              <div class="k">Phone</div>
-              <div class="v" id="phoneText">054 995 8877</div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- WHAT WE DO (unchanged) -->
+    <!-- WHAT WE DO -->
     <section id="what" class="section">
       <div class="container">
         <div class="section-head">
@@ -1068,4 +1043,451 @@
             </p>
           </div>
 
-          <div class="tabs" role="tablist" aria
+          <div class="tabs" role="tablist" aria-label="Service categories">
+            <button class="tab active" id="tabRes" type="button" role="tab" aria-selected="true">
+              Residential
+            </button>
+            <button class="tab" id="tabCom" type="button" role="tab" aria-selected="false">
+              Commercial
+            </button>
+          </div>
+        </div>
+
+        <div class="what-grid" id="whatGrid"></div>
+
+        <div class="detail-panel" id="detailPanel" aria-live="polite">
+          <div>
+            <h3 id="detailTitle">Loading…</h3>
+            <p class="desc" id="detailDesc"></p>
+            <ul class="bullets" id="detailBullets"></ul>
+          </div>
+
+          <div style="display:grid; gap: 12px;">
+            <div class="mini">
+              <div class="k">Typical time</div>
+              <div class="v" id="detailTime">—</div>
+              <div class="note" id="detailNote">—</div>
+            </div>
+
+            <a class="btn btn-gold" id="detailWA" href="#" target="_blank" rel="noopener">
+              <span class="dot" aria-hidden="true">»</span>
+              Book on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Gallery</h2>
+            <p class="lead">
+              A quick look at the kind of clean we deliver — homes, offices, and deep cleaning results.
+              (You can replace these images with your real photos anytime.)
+            </p>
+          </div>
+          <a class="btn btn-navy" id="galleryWA" href="#" target="_blank" rel="noopener">
+            <span class="dot" aria-hidden="true">📸</span>
+            Send Photos for Quote
+          </a>
+        </div>
+
+        <div class="gallery">
+          <div class="g w8">
+            <img
+              src="https://images.unsplash.com/photo-1581579185169-35e3f0a9c0a1?auto=format&fit=crop&w=1400&q=80"
+              alt="Home cleaning"
+            />
+            <span>Home Cleaning</span>
+          </div>
+          <div class="g w4">
+            <img
+              src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80"
+              alt="Kitchen cleaned"
+            />
+            <span>Kitchen</span>
+          </div>
+          <div class="g w4">
+            <img
+              src="https://images.unsplash.com/photo-1527515862127-a4fc05baf7a5?auto=format&fit=crop&w=900&q=80"
+              alt="Office cleaning"
+            />
+            <span>Office</span>
+          </div>
+          <div class="g w4">
+            <img
+              src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80"
+              alt="Bathroom cleaning"
+            />
+            <span>Bathroom</span>
+          </div>
+          <div class="g w4">
+            <img
+              src="https://images.unsplash.com/photo-1528291954423-c0c71c12baeb?auto=format&fit=crop&w=900&q=80"
+              alt="Cleaning supplies"
+            />
+            <span>Supplies</span>
+          </div>
+          <div class="g w6">
+            <img
+              src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1200&q=80"
+              alt="Professional cleaning team"
+            />
+            <span>Professional Service</span>
+          </div>
+          <div class="g w6">
+            <img
+              src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=1200&q=80"
+              alt="Living room"
+            />
+            <span>Living Room</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPOINTMENT -->
+    <section id="appointment" class="section">
+      <div class="container">
+        <div class="appointment">
+          <div class="form-card">
+            <h2>Book an Appointment</h2>
+            <p>
+              Fill this small form and we’ll open WhatsApp with your message ready.
+              Add your location like <b>East Legon, Kasoa, Tema, Madina</b> + a nearby landmark.
+            </p>
+
+            <form id="bookingForm">
+              <div class="grid2">
+                <input class="input" id="name" type="text" placeholder="Your Name" required />
+                <input class="input" id="phone" type="tel" placeholder="Your Phone (e.g., 054...) " required />
+              </div>
+
+              <div class="grid2" style="margin-top: 12px;">
+                <select class="select" id="service" required>
+                  <option value="" disabled selected>Choose a Service</option>
+                  <option>Deep Cleaning</option>
+                  <option>Home Cleaning</option>
+                  <option>Office Cleaning</option>
+                  <option>Post-Construction Cleaning</option>
+                  <option>Move In / Move Out</option>
+                  <option>Sofa / Upholstery Cleaning</option>
+                  <option>Carpet / Rug Cleaning</option>
+                  <option>Event Cleanup</option>
+                </select>
+                <input class="input" id="location" type="text" placeholder="Location / Area (e.g., Spintex)" />
+              </div>
+
+              <div style="margin-top: 12px;">
+                <textarea
+                  class="textarea"
+                  id="message"
+                  placeholder="Message (preferred date/time, landmark, special request)…"
+                ></textarea>
+              </div>
+
+              <div class="submit-row">
+                <button class="btn btn-gold" type="submit">
+                  <span class="dot" aria-hidden="true">»</span>
+                  Send on WhatsApp
+                </button>
+                <div class="help">
+                  Tip: Attach photos/videos on WhatsApp for faster estimate.
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="app-photo" aria-label="Booking image">
+            <div class="rings" aria-hidden="true">
+              <div class="ring r2"></div>
+              <div class="ring r1"></div>
+            </div>
+            <div class="hero-photo">
+              <!-- Black African lady (nice, professional look) -->
+              <img
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1400&q=80"
+                alt="Smiling African lady"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">
+              <img
+                src="assets/img/icon/whitelogoready.png"
+                alt="ReadySpace Logo"
+              />
+              <div>
+                <h4>ReadySpace Cleaning Service</h4>
+                <p style="margin:6px 0 0;">
+                  Neat, reliable cleaning for Ghana homes and businesses.
+                  Bookings and quotes via WhatsApp.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="#services">Services</a>
+            <a href="#what">What We Do</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#appointment">Book</a>
+          </div>
+
+          <div>
+            <h4>Contact</h4>
+            <p><b>Address:</b> <span id="footerAddress">Konko Band Prod House</span></p>
+            <p><b>Phone:</b> <span id="footerPhone">054 995 8877</span></p>
+            <p><b>Website:</b> readyspacegh.com</p>
+
+            <p style="margin-top: 12px;">
+              <a class="btn btn-gold" id="footerWA" href="#" target="_blank" rel="noopener">
+                <span class="dot" aria-hidden="true">💬</span>
+                Chat on WhatsApp
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="foot-note">
+          <div>© <span id="year"></span> ReadySpace Cleaning Service. All rights reserved.</div>
+          <div>Made with Navy & Gold vibes ✨</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp button -->
+    <a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path
+          d="M19.11 17.23c-.27-.14-1.6-.79-1.85-.88-.25-.09-.44-.14-.62.14-.18.27-.71.88-.87 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.2-1.35-.82-.73-1.37-1.63-1.53-1.9-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.44.09-.18.05-.34-.02-.48-.07-.14-.62-1.49-.85-2.04-.22-.53-.45-.46-.62-.46l-.53-.01c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29s.98 2.66 1.12 2.85c.14.18 1.93 2.95 4.68 4.13.66.29 1.18.46 1.58.59.66.21 1.25.18 1.72.11.52-.08 1.6-.65 1.82-1.28.22-.62.22-1.16.16-1.28-.07-.12-.25-.2-.52-.34z"
+        />
+        <path
+          d="M16.01 3C9.4 3 4.02 8.37 4.02 14.98c0 2.33.67 4.6 1.94 6.54L4 29l7.67-1.97a11.93 11.93 0 0 0 4.34.81c6.61 0 11.98-5.38 11.98-11.99C28 8.37 22.62 3 16.01 3zm0 21.2c-1.41 0-2.8-.28-4.09-.84l-.29-.12-4.55 1.17 1.21-4.43-.16-.31a9.24 9.24 0 0 1-1.39-4.67c0-5.12 4.16-9.28 9.28-9.28s9.28 4.16 9.28 9.28-4.16 9.2-9.28 9.2z"
+        />
+      </svg>
+    </a>
+
+    <script>
+      // =======================
+      // EDIT THESE DETAILS
+      // =======================
+      const BRAND = {
+        name: "ReadySpace Cleaning Service",
+        address: "Konko Band Prod House",
+        phone_display: "054 995 8877",
+
+        // WhatsApp number must be in international format (Ghana: 233 + number without leading 0)
+        // Your phone on the card: 0549958877 -> WhatsApp: 233549958877
+        wa_number: "233549958877",
+      };
+
+      // =======================
+      // Helpers
+      // =======================
+      function waLink(text) {
+        return `https://wa.me/${BRAND.wa_number}?text=${encodeURIComponent(text)}`;
+      }
+
+      // Fill details in UI
+      document.getElementById("addrText").textContent = BRAND.address;
+      document.getElementById("phoneText").textContent = BRAND.phone_display;
+      document.getElementById("footerAddress").textContent = BRAND.address;
+      document.getElementById("footerPhone").textContent = BRAND.phone_display;
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // WhatsApp links
+      const intro = `Hello ${BRAND.name}, please I need a quote / booking.`;
+      document.getElementById("navWhatsApp").href = waLink(intro);
+      document.getElementById("heroWhatsApp").href = waLink(
+        `Hello ${BRAND.name}, please I want to book a cleaning.`
+      );
+      document.getElementById("galleryWA").href = waLink(
+        `Hello ${BRAND.name}, I want a quote. I’m sending photos/videos.`
+      );
+      document.getElementById("footerWA").href = waLink(intro);
+      document.getElementById("waFloat").href = waLink(intro);
+
+      // Mobile menu
+      const menuBtn = document.getElementById("menuBtn");
+      const mobilePanel = document.getElementById("mobilePanel");
+      menuBtn?.addEventListener("click", () => {
+        const open = mobilePanel.style.display === "block";
+        mobilePanel.style.display = open ? "none" : "block";
+      });
+      mobilePanel.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => (mobilePanel.style.display = "none"));
+      });
+
+      // =======================
+      // What We Do (data)
+      // =======================
+      const DATA = {
+        residential: [
+          {
+            icon: "🏠",
+            title: "Home Cleaning",
+            desc: "Regular cleaning to keep your home fresh, neat and welcoming.",
+            bullets: ["Sweeping & mopping", "Dusting surfaces", "Bathroom & toilet cleaning", "Kitchen wipe-down"],
+            time: "2–4 hours",
+            note: "Great for weekly/bi-weekly. Price depends on rooms + condition.",
+          },
+          {
+            icon: "✨",
+            title: "Deep Cleaning",
+            desc: "Intensive cleaning for corners, stains, and areas that need extra attention.",
+            bullets: ["Tiles & edges scrub", "Stove/cabinets detailing", "Bathroom deep scrub", "Whole-house refresh"],
+            time: "4–8 hours",
+            note: "Perfect for monthly/quarterly reset or before visitors.",
+          },
+          {
+            icon: "📦",
+            title: "Move In / Move Out",
+            desc: "Cleaning before you move in, or after you move out (handover-ready).",
+            bullets: ["Rooms + windows wipe-down", "Kitchen + bathroom deep clean", "Floors full wash", "Final inspection"],
+            time: "4–10 hours",
+            note: "Share your location + preferred date to confirm availability.",
+          },
+        ],
+        commercial: [
+          {
+            icon: "🏢",
+            title: "Office Cleaning",
+            desc: "Professional cleaning for offices, washrooms, reception and common areas.",
+            bullets: ["Desks & surfaces", "Washrooms sanitising", "Floors & reception", "Bins & restocking (optional)"],
+            time: "Flexible",
+            note: "We can clean evenings/weekends to avoid disrupting work.",
+          },
+          {
+            icon: "🏗️",
+            title: "Post-Construction Cleaning",
+            desc: "Remove cement dust, debris and stains after renovation/new build.",
+            bullets: ["Debris removal", "Cement dust clearing", "Frames & windows", "Final shine for handover"],
+            time: "Project-based",
+            note: "Send a quick video on WhatsApp for proper assessment.",
+          },
+          {
+            icon: "🎉",
+            title: "Event Cleanup",
+            desc: "Before & after cleanup for parties, weddings, funerals, and corporate events.",
+            bullets: ["Venue prep support", "After-event cleanup", "Trash collection", "Fast turnaround"],
+            time: "Flexible",
+            note: "Tell us venue + time. We’ll plan the team size.",
+          },
+        ],
+      };
+
+      let activeTab = "residential";
+      let activeIndex = 0;
+
+      const tabRes = document.getElementById("tabRes");
+      const tabCom = document.getElementById("tabCom");
+      const whatGrid = document.getElementById("whatGrid");
+
+      const detailTitle = document.getElementById("detailTitle");
+      const detailDesc = document.getElementById("detailDesc");
+      const detailBullets = document.getElementById("detailBullets");
+      const detailTime = document.getElementById("detailTime");
+      const detailNote = document.getElementById("detailNote");
+      const detailWA = document.getElementById("detailWA");
+
+      function renderWhat() {
+        whatGrid.innerHTML = "";
+        const list = DATA[activeTab];
+
+        list.forEach((item, idx) => {
+          const card = document.createElement("button");
+          card.type = "button";
+          card.className = "what-card" + (idx === activeIndex ? " active" : "");
+          card.innerHTML = `
+            <div class="top">
+              <div class="badge" aria-hidden="true">${item.icon}</div>
+              <div>
+                <h3>${item.title}</h3>
+              </div>
+            </div>
+            <p>${item.desc}</p>
+          `;
+          card.addEventListener("click", () => {
+            activeIndex = idx;
+            renderWhat();
+            renderDetail();
+          });
+          whatGrid.appendChild(card);
+        });
+      }
+
+      function renderDetail() {
+        const item = DATA[activeTab][activeIndex];
+        detailTitle.textContent = item.title;
+        detailDesc.textContent = item.desc;
+
+        detailBullets.innerHTML = "";
+        item.bullets.forEach((b) => {
+          const li = document.createElement("li");
+          li.innerHTML = `<span class="tick" aria-hidden="true">✓</span><span>${b}</span>`;
+          detailBullets.appendChild(li);
+        });
+
+        detailTime.textContent = item.time;
+        detailNote.textContent = item.note;
+
+        detailWA.href = waLink(
+          `Hello ${BRAND.name}, I want to book: ${item.title}. Location: ______. Preferred date/time: ______. Please share price.`
+        );
+      }
+
+      function setTab(tab) {
+        activeTab = tab;
+        activeIndex = 0;
+        tabRes.classList.toggle("active", tab === "residential");
+        tabCom.classList.toggle("active", tab === "commercial");
+        tabRes.setAttribute("aria-selected", tab === "residential");
+        tabCom.setAttribute("aria-selected", tab === "commercial");
+        renderWhat();
+        renderDetail();
+      }
+
+      tabRes.addEventListener("click", () => setTab("residential"));
+      tabCom.addEventListener("click", () => setTab("commercial"));
+
+      setTab("residential");
+
+      // =======================
+      // Booking form -> WhatsApp
+      // =======================
+      document.getElementById("bookingForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const service = document.getElementById("service").value;
+        const location = document.getElementById("location").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        const text =
+          `Hello ${BRAND.name},\n` +
+          `My name is ${name}.\n` +
+          `Phone: ${phone}\n` +
+          `Service: ${service}\n` +
+          (location ? `Location: ${location}\n` : "") +
+          (message ? `Message: ${message}\n` : "") +
+          `\nPlease I want to book / get a quote.`;
+
+        window.open(waLink(text), "_blank");
+      });
+    </script>
+  </body>
+</html>
